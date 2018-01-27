@@ -1,0 +1,22 @@
+{
+  "name": "see-you-space-cow-2018",
+  "description": "2018 wordpress theme",
+  "main": "gulpfile.js",
+  "authors": [
+    "Mimi Kim"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mimikim/See-You-Space-Cow-2018",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "vendor/"
+  ],
+  "dependencies": {
+    "normalize-css": "^7.0.0"
+  }
+}
