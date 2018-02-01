@@ -16,7 +16,10 @@
     "tests",
     "vendor/"
   ],
-  "dependencies": {
-    "normalize-css": "^7.0.0"
+  "devDependencies": {
+    "animejs": "^2.2.0",
+    "normalize-css": "^7.0.0",
+    "fullpage.js": "^2.9.6",
+    "espi-a11y-dialog": "^5.0.0"
   }
 }
