@@ -4,10 +4,13 @@ const sass = require( 'gulp-sass' ),
   rename = require( 'gulp-rename' ),
   autoprefixer = require( 'gulp-autoprefixer' ),
   postcss = require( 'gulp-postcss' ),
-  svg = require( 'postcss-svg' )();
+  svg = require( 'postcss-svg' )(),
+  notify = require( 'gulp-notify' );
 
 module.exports = () => {
-  return gulp.src( 'assets/css/scss/*.scss' )
+  return gulp.src( [
+    'assets/css/scss/*.scss'
+  ] )
     .pipe( sass( {
       outputStyle: 'compressed'
     } ).on( 'error', sass.logError ) )
@@ -17,6 +20,6 @@ module.exports = () => {
     } ) )
     .pipe( postcss( [ svg ] ) )
     .pipe( rename( 'style.min.css' ) )
+    .pipe( notify( 'css complete' ) )
     .pipe( gulp.dest( 'assets/css' ) );
 };
-

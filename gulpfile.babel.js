@@ -5,7 +5,8 @@ let gulp = require( './gulp' )( [
   'svg',
   'css',
   'js',
+  'vendors',
   'watch'
 ] );
 
-gulp.task( 'default', [  'image', 'svg', 'css', 'js' ] );
+gulp.task( 'default', [  'image', 'svg', 'css', 'js', 'vendors', 'watch' ] );

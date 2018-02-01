@@ -1,10 +1,11 @@
 let gulp = require( 'gulp' ),
-  svgmin = require( 'gulp-svgmin' );
+  svgmin = require( 'gulp-svgmin' ),
+  notify = require( 'gulp-notify' );
 
 module.exports = function() {
   return gulp.src( 'assets/svg/src/*.svg' )
-    .pipe(svgmin({
-      plugins: [{
+    .pipe(svgmin( {
+      plugins: [ {
         removeDoctype: true
       }, {
         removeComments: true
@@ -17,8 +18,11 @@ module.exports = function() {
           names2hex: false,
           rgb2hex: false
         }
-      }]
-    }))
+      }, {
+        cleanupIDs: false
+      } ]
+    } ) )
+    .pipe( notify( 'svg complete' ) )
     .pipe( gulp.dest( 'assets/svg' ) );
 };
 
