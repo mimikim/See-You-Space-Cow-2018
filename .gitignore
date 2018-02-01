@@ -2,4 +2,4 @@
 .idea
 .git
 node_modules
-vendor
+assets/vendor
