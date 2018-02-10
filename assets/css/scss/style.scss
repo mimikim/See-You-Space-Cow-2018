@@ -1,9 +1,31 @@
 // globals
+@import 'global/normalize';
 @import 'global/fonts';
+@import 'global/icon-font';
 @import 'global/variables';
+@import 'global/animations';
+@import 'global/typography';
+@import 'global/utility';
+@import 'global/mixins';
 
 // templates
 @import 'templates/base';
+@import 'templates/frontpage';
+@import 'templates/portfolio';
 
 // components
+@import 'components/buttons';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/nav-toggle';
+@import 'components/cards';
+@import 'components/modal';
 @import 'components/hero';
+@import 'components/tooltips';
+@import 'components/slider';
+
+// svgs
+@import 'svg/cow-sitting';
+@import 'svg/badge';
+@import 'svg/star';
+

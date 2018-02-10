@@ -1,6 +1,15 @@
-.space-canvas {
-  height: 100%;
-  width: 100%;
-  background: $blue-dark;
-  color: $white;
+.hero {
+  @include starry-bg( 50%, bottom );
+  transform: translateX(0);
+  overflow: hidden;
+
+  height: 300px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
