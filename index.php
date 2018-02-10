@@ -1,15 +1,10 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>mkwd</title>
-    <?php wp_head(); ?>
-</head>
-<body>
+<?php get_header(); ?>
 
-<div class="space-canvas">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-</div>
+    <?php echo get_the_content(); ?>
 
-<?php wp_footer(); ?>
-</body>
-</html>
+  <?php endwhile; endif; ?>
+
+<?php get_footer(); ?>
+
