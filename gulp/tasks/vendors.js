@@ -7,7 +7,6 @@ const concat = require( 'gulp-concat' ),
 
 module.exports = () => {
   return gulp.src( [
-    'assets/vendor/fullpage.js/dist/jquery.fullpage.min.js',
     'assets/vendor/animejs/anime.min.js',
     'assets/vendor/espi-a11y-dialog/a11y-dialog.min.js'
   ] )

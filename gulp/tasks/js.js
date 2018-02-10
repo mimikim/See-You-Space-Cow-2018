@@ -12,6 +12,13 @@ const path = 'assets/js/src/';
 let jsfiles = [
   {
     src: [
+      path + 'navigation.js',
+      path + 'helpers.js',
+    ],
+    filename: 'general'
+  },
+  {
+    src: [
       path + 'frontpage/cow-animation.js',
       path + 'frontpage/homepage-scroller.js',
     ],
@@ -19,14 +26,13 @@ let jsfiles = [
   },
   {
     src: [
-      path + 'navigation.js',
-      path + 'helpers.js',
+      path + 'portfolio.js'
     ],
-    filename: 'general'
+    filename: 'portfolio'
   },
 ];
 
-let jstask = ( srcArray, filename ) => {
+const jstask = ( srcArray, filename ) => {
   return gulp.src( srcArray )
     .pipe( eslint() )
     .pipe( babel() )
