@@ -1,8 +1,12 @@
 <?php
+// custom controller, adds portfolio endpoints
+// https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/#examples
+// https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/#extending-internal-classes
 
-// featured portfolio slider
+// for the "get_featured_image" method
+require_once 'Helpers.php';
 
-class SC_Featured extends WP_REST_Controller {
+class SC_Portfolio extends WP_REST_Controller {
 
     // register routes
     public function register_routes() {

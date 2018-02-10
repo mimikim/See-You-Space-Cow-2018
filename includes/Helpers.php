@@ -21,7 +21,7 @@ class Helpers {
         <?php echo $category->name; ?>
       </button>
     <?php endforeach;
-    
+
   }
 
   // returns featured image url
