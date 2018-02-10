@@ -5,13 +5,9 @@ namespace SpaceCow;
 
 // define global variables
 define( 'SPACECOW_URL', get_stylesheet_directory_uri() );
-define( 'SPACECOW_TEMPLATE_URL', get_template_directory_uri() );
-define( 'SPACECOW_PATH', get_template_directory() . '/' );
-define( 'SPACECOW_INC', SPACECOW_PATH . 'includes/' );
+define( 'SPACECOW_INC', get_template_directory() . '/includes/' );
 
 // SPACECOW_URL: http://mkwd.test/wp-content/themes/See-You-Space-Cow-2018
-// SPACECOW_TEMPLATE_URL: http://mkwd.test/wp-content/themes/See-You-Space-Cow-2018
-// SPACECOW_PATH: /srv/www/mkwebdev/htdocs/wp-content/themes/See-You-Space-Cow-2018/
 // SPACECOW_INC: /srv/www/mkwebdev/htdocs/wp-content/themes/See-You-Space-Cow-2018/includes/
 
 // setup
