@@ -3,7 +3,7 @@
 namespace SpaceCow;
 
 // portfolio api
-require_once 'SP_Portfolio.php';
+require_once 'SC_Portfolio.php';
 
 class Setup {
 
@@ -11,7 +11,7 @@ class Setup {
         $this->post_type = new PostType();
         $this->taxonomy = new Taxonomy();
         $this->helpers = new Helpers();
-        $this->api = new \SP_Portfolio();
+        $this->api = new \SC_Portfolio();
     }
 
     function init() {

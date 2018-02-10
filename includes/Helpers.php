@@ -9,7 +9,6 @@ class Helpers {
   static function render_category_filters( $type ) {
 
     $main_taxonomy = get_object_taxonomies($type);
-
     $categories = get_terms($main_taxonomy[0], array(
       'type' => $type,
       'orderby' => 'name',
@@ -18,12 +17,11 @@ class Helpers {
     ));
 
     foreach ($categories as $category) : ?>
-
       <button class="button medium-padding ga-tracking" data-category-id="<?php echo $category->term_id; ?>" data-event-category="Category Filter" data-event-action="Clicked Filter" data-event-label="<?php echo $category->name; ?>">
         <?php echo $category->name; ?>
       </button>
-
     <?php endforeach;
+    
   }
 
   // returns featured image url
@@ -34,11 +32,6 @@ class Helpers {
     } else {
       return false;
     }
-  }
-
-
-  static function load_svg( $name, $opts = array() ) {
-
   }
 
 }
