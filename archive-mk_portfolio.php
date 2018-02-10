@@ -11,7 +11,7 @@ $type = get_post_type();
     <?php \SpaceCow\Helpers::render_category_filters( $type ); ?>
   </nav>
 
-  <button id="js-shuffle" class="button red icon-flash"></button>
+  <button id="js-reset" class="button">Reset Filters</button>
 
   <section id="js-portfolio-results" class="portfolio-container">
     <?php

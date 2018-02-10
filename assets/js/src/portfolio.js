@@ -16,10 +16,26 @@
           this.container_div.innerHTML = '';
           button.classList.toggle( 'active' );
           this.maybe_add_button( button );
-          this.api_call( button, this.active_buttons );
+          this.api_call( this.active_buttons );
         } );
       } );
+
+      // add reset button
+      document.getElementById( 'js-reset' ).addEventListener( 'click', this.reset );
     }
+
+    // resets active filters
+    reset = () => {
+      if ( this.active_buttons.length > 0 ) {
+        this.active_buttons = [];
+
+        document.querySelectorAll( '#js-portfolio-filters .button' ).forEach( button => {
+          button.classList.remove( 'active' );
+        } );
+
+        this.api_call();
+      }
+    };
 
     // add or remove toggled filter button from array
     maybe_add_button( element ) {
@@ -34,7 +50,7 @@
       }
     }
 
-    api_call( element, selectedIDs ) {
+    api_call( selectedIDs = [] ) {
       // create promise
       let promise = new Promise( ( resolve, reject ) => {
         let xhr = new XMLHttpRequest();
@@ -68,9 +84,9 @@
         } );
 
         this.container_div.innerHTML = html;
-
       } );
-    };
+    }
+
   }
 
   new Portfolio;
